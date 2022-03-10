@@ -1,3 +1,4 @@
+import { registerRootComponent } from "expo";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import NameChange from "./components/atoms/NameChange";
@@ -22,3 +23,5 @@ const styles = StyleSheet.create({
         justifyContent: "center"
     }
 });
+
+registerRootComponent(App);

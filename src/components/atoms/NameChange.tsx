@@ -1,6 +1,6 @@
 import { useCallback } from "react";
 import { useState } from "react";
-import { Button, Text } from "react-native";
+import { Button, StyleSheet, Text } from "react-native";
 
 const NameChange: React.FC = () => {
     const [name, setName] = useState("Nikola");
@@ -14,10 +14,16 @@ const NameChange: React.FC = () => {
 
     return (
         <>
-            <Text>{name}</Text>
+            <Text style={styles.textName}>{name}</Text>
             <Button title="Change state" onPress={handleNameChange} />
         </>
     );
 };
+
+const styles = StyleSheet.create({
+    textName: {
+        fontSize: 20
+    }
+});
 
 export default NameChange;
